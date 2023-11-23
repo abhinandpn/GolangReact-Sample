@@ -10,6 +10,10 @@ type AdminHandler struct {
 	AdminUseCase services.AdminUseCase
 }
 
+func NewAdminHandler(adminUseCase services.AdminUseCase) handlerinterfaces.AdminHandler {
+	return &AdminHandler{AdminUseCase: adminUseCase}
+}
+
 // AdminHome implements interfaces.AdminHandler.
 func (*AdminHandler) AdminHome(ctx *gin.Context) {
 	panic("unimplemented")
@@ -23,8 +27,4 @@ func (*AdminHandler) AdminLogin(ctx *gin.Context) {
 // AdminLogout implements interfaces.AdminHandler.
 func (*AdminHandler) AdminLogout(ctx *gin.Context) {
 	panic("unimplemented")
-}
-
-func NewAdminHandler(adminUseCase services.AdminUseCase) handlerinterfaces.AdminHandler {
-	return &AdminHandler{AdminUseCase: adminUseCase}
 }
