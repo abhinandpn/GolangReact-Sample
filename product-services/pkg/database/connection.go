@@ -19,7 +19,7 @@ func ConnectDatabase(cfg config.Config) (*gorm.DB, error) {
 	})
 
 	err := db.AutoMigrate(
-		&models.User{},
+		&models.Product{},
 	)
 	if err != nil {
 		return nil, err

@@ -7,7 +7,7 @@ import (
 	"github.com/abhinandpn/MicroServices-GoLang/admin-services/pkg/repositories/interfaces"
 	services "github.com/abhinandpn/MicroServices-GoLang/admin-services/pkg/usecase/interfaces"
 )
-
+ 
 type AdminUseCase struct {
 	AdminRepo interfaces.AdminRepository
 }
