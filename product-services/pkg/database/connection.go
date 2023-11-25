@@ -6,6 +6,7 @@ import (
 	"gorm.io/driver/postgres"
 
 	"github.com/abhinandpn/MicroServices-GoLang/product-services/pkg/config"
+	"github.com/abhinandpn/MicroServices-GoLang/product-services/pkg/models"
 	"gorm.io/gorm"
 )
 
