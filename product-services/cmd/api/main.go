@@ -3,8 +3,8 @@ package main
 import (
 	"log"
 
-	"github.com/abhinandpn/MicroServices-GoLang/admin-services/pkg/config"
-	"github.com/abhinandpn/MicroServices-GoLang/admin-services/pkg/di"
+	"github.com/abhinandpn/MicroServices-GoLang/product-services/pkg/config"
+	"github.com/abhinandpn/MicroServices-GoLang/product-services/pkg/di"
 )
 
 func main() {
