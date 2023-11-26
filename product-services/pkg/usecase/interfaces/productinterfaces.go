@@ -1,5 +1,18 @@
 package interfaces
 
-type ProductUseCase interface{
-	
+type ProductUseCase interface {
+
+	// Product
+	CreateProduct()
+	UpdateProduct()
+	DeletProduct()
+
+	// Listing
+	ViewFullProducts()
+	ViewProductById()
+	ViewProductByName()
+	ViewProductsByCategory()
+	ViewProductsBySUbCategory()
+	ViewProductsByBrands()
+
 }

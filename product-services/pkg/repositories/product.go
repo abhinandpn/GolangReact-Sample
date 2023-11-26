@@ -10,5 +10,41 @@ type ProductDatabase struct {
 }
 
 func NewProductRepository(DB *gorm.DB) interfaces.ProductRepositorie {
-	return ProductDatabase{DB: DB}
+	return &ProductDatabase{DB: DB}
+}
+
+// Product Basic
+
+func (P *ProductDatabase) AddProduct() {
+
+}
+
+func (P *ProductDatabase) UpdateProduct() {
+
+}
+
+func (P *ProductDatabase) DeleteProduct() {
+
+}
+
+// Product filtering
+
+func (P *ProductDatabase) GetFullProducts() {
+
+}
+
+func (P *ProductDatabase) GetProductById() {
+
+}
+
+func (P *ProductDatabase) GetProductByName() {
+
+}
+
+func (P *ProductDatabase) GetProductByCategory() {
+
+}
+
+func (P *ProductDatabase) GetProductByBrand() {
+
 }
