@@ -15,6 +15,14 @@ func NewProductHandler(productUsecase services.ProductUseCase) handlerinterfaces
 	return &ProductHandler{ProductUseCase: productUsecase}
 }
 
+// AddProducts godoc
+// @summary api for admin to update a product
+// @id AddProducts
+// @tags Admin Products
+// @Param input body req.ReqProduct{} true "inputs"
+// @Router /products [post]
+// @Success 200 {object} res.Response{} "successfully product added"
+// @Failure 400 {object} res.Response{} "invalid input"
 func (P *ProductHandler) AddProduct(ctx *gin.Context) {
 
 }
