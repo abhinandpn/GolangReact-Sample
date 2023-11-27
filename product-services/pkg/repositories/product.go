@@ -16,35 +16,35 @@ func NewProductRepository(DB *gorm.DB) interfaces.ProductRepositorie {
 // Product Basic
 
 func (P *ProductDatabase) AddProduct() {
-
+	panic("unimplemented AddProduct --> Repositories")
 }
 
 func (P *ProductDatabase) UpdateProduct() {
-
+	panic("unimplemented UpdateProduct --> Repositories")
 }
 
 func (P *ProductDatabase) DeleteProduct() {
-
+	panic("unimplemented DeleteProduct --> Repositories")
 }
 
 // Product filtering
 
 func (P *ProductDatabase) GetFullProducts() {
-
+	panic("unimplemented GetFullProducts --> Repositories")
 }
 
 func (P *ProductDatabase) GetProductById() {
-
+	panic("unimplemented GetProductById --> Repositories")
 }
 
 func (P *ProductDatabase) GetProductByName() {
-
+	panic("unimplemented GetProductByName --> Repositories")
 }
 
 func (P *ProductDatabase) GetProductByCategory() {
-
+	panic("unimplemented GetProductByCategory --> Repositories")
 }
 
 func (P *ProductDatabase) GetProductByBrand() {
-
+	panic("unimplemented GetProductByBrand --> Repositories")
 }

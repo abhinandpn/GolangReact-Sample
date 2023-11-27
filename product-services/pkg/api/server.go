@@ -4,6 +4,8 @@ import (
 	handlerinterfaces "github.com/abhinandpn/MicroServices-GoLang/product-services/pkg/api/handler/interfaces"
 	"github.com/abhinandpn/MicroServices-GoLang/product-services/pkg/api/routes"
 	"github.com/gin-gonic/gin"
+	swaggerfiles "github.com/swaggo/files"
+	ginSwagger "github.com/swaggo/gin-swagger"
 )
 
 type ServerHTTP struct {
@@ -19,7 +21,7 @@ func NewServerHTTP(ProductHandler handlerinterfaces.ProductHandler) *ServerHTTP 
 	// Engine.LoadHTMLGlob("*.html")
 
 	// For Swagger
-	// Engine.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerfiles.Handler))
+	Engine.GET("/docs/*any", ginSwagger.WrapHandler(swaggerfiles.Handler))
 
 	routes.ProductRoute(Engine.Group("/product"),
 		ProductHandler,

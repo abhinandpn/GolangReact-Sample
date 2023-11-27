@@ -9,7 +9,7 @@ import (
 func ProductRoute(api *gin.RouterGroup,
 	ProductHandler handlerinterfaces.ProductHandler) {
 
-	product := api.Group("/product")
+	product := api.Group("/")
 	{
 		// Product Basic
 		product.POST("/add", ProductHandler.AddProduct)      // Product Adding
