@@ -12,3 +12,19 @@ type UserUsecase struct {
 func NewUserUsecase(UserRepo interfaces.UserRepository) services.UserUsecase {
 	return &UserUsecase{UserRepo: UserRepo}
 }
+
+func (U *UserUsecase) UserLogin() {
+
+}
+
+func (U *UserUsecase) UserLogout() {
+
+}
+
+func (U *UserUsecase) UserHome() {
+
+}
+
+func (U *UserUsecase) UserAccount() {
+
+}

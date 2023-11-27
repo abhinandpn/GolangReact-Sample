@@ -12,3 +12,7 @@ type UserDataBase struct {
 func NewUserRepository(DB *gorm.DB) interfaces.UserRepository {
 	return &UserDataBase{DB: DB}
 }
+
+func (U *UserDataBase) FindUser() {
+
+}
