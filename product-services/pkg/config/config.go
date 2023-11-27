@@ -1,8 +1,6 @@
 package config
 
 import (
-	"os"
-
 	"github.com/go-playground/validator"
 	"github.com/spf13/viper"
 )
@@ -19,28 +17,20 @@ var envs = []string{
 	"DB_HOST", "DB_NAME", "DB_USER", "DB_PORT", "DB_PASSWORD", // Database
 }
 
-var config Config // for create instance
+var config Config // create instence of config
 
-func LoadCOnfig() (Config, error) {
+// func to get env variable and store it on struct Config and retuen it with error as nil or error
+func LoadConfig() (Config, error) {
 
-	v := viper.New()
+	// vipen setup
+	viper.AddConfigPath("./")   // add config path
+	viper.SetConfigFile(".env") //setup file name to viper
+	viper.ReadInConfig()        // read .env file
 
-	// Get the current working directory
-	wd, err := os.Getwd()
-	if err != nil {
-		return config, err
-	}
-
-	//Viper setup
-	v.AddConfigPath(wd)
-	v.SetConfigFile(".env")
-	v.ReadInConfig() // for read config
-
-	v.SetEnvPrefix("product-services")
-	v.AutomaticEnv()
+	// range through the envNames and take each envName and bind that env variable to viper
 
 	for _, env := range envs {
-		if err := v.BindEnv(env); err != nil {
+		if err := viper.BindEnv(env); err != nil {
 			return config, err // error handling
 		}
 	}
@@ -58,7 +48,6 @@ func LoadCOnfig() (Config, error) {
 	}
 
 	//successfully loaded the env values into struct config
-
 	return config, nil
 }
 
