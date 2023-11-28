@@ -1,1 +1,1 @@
-# MicroServices-GoLang
+# Goland & React Sample 
