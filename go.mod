@@ -1,3 +1,3 @@
-module github.com/abhinandpn/MicroServices-GoLang
+module github.com/abhinandpn/GolangReact-Sample
 
 go 1.20
